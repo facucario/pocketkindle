@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}PocketKindle – Login{% endblock %}
+
+{% block content %}
+  <p class="subtitle">Sign in with your Instapaper account.</p>
+
+  <form method="post" action="{{ url_for('login_post') }}" class="form">
+    <label class="label">
+      <span>Email or username</span>
+      <input type="text" name="username" required autofocus>
+    </label>
+
+    <label class="label">
+      <span>Password</span>
+      <input type="password" name="password" required>
+    </label>
+
+    <button type="submit" class="button">Sign in</button>
+  </form>
+
+  <p class="hint">
+    Your Instapaper credentials are only used to obtain an access token from Instapaper over HTTPS and are not stored.
+  </p>
+{% endblock %}
+
+

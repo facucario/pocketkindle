@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}PocketKindle – Articles{% endblock %}
+
+{% block content %}
+  {% if bookmarks %}
+    <ul class="list">
+      {% for b in bookmarks %}
+        <li class="item item-row">
+          <div class="item-main">
+            <a class="item-title" href="{{ url_for('read', bookmark_id=b.bookmark_id, title=b.title, source=b.url|default('', true), saved=b.time|default('', true)) }}">{{ b.title or "(Untitled)" }}</a>
+            {% if b.url %}
+              <div class="item-meta">
+                {{ b.url }}
+              </div>
+            {% endif %}
+          </div>
+          <form method="post" action="{{ url_for('archive', bookmark_id=b.bookmark_id) }}" class="item-action">
+            <button type="submit" class="button button-small">Archive</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="pagination">
+      {% if has_prev %}
+        <a class="link" href="{{ url_for('articles', page=page-1) }}">Previous</a>
+      {% endif %}
+      {% if has_next %}
+        {% if has_prev %} · {% endif %}
+        <a class="link" href="{{ url_for('articles', page=page+1) }}">More</a>
+      {% endif %}
+    </div>
+  {% else %}
+    <p>No unread articles found.</p>
+  {% endif %}
+{% endblock %}
+
