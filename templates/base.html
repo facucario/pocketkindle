@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}PocketKindle{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body class="page{% if session.get('font_size') == 'small' %} font-small{% elif session.get('font_size') == 'large' %} font-large{% endif %}">
+    <main class="main">
+      {% if request.endpoint != 'read' %}
+        <header class="header">
+          <h1 class="title"><a href="{{ url_for('articles') }}">PocketKindle</a></h1>
+          {% if session.get('instapaper_username') %}
+            <p class="user">Signed in as {{ session.get('instapaper_username') }}</p>
+            <a class="link" href="{{ url_for('settings') }}">Settings</a> ·
+            <a class="link" href="{{ url_for('logout') }}">Sign out</a>
+          {% endif %}
+        </header>
+      {% endif %}
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="flash">
+            {% for message in messages %}
+              <p>{{ message }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
+

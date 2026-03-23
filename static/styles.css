@@ -1,0 +1,193 @@
+.page {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #111111;
+  font-family: sans-serif;
+}
+
+.main {
+  max-width: 40rem;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.title a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.article-meta {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+.form {
+  display: block;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.label span {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+}
+
+.flash {
+  background: #fce4e4;
+  color: #7d1111;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.hint {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: #444444;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.item-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.item-action {
+  flex: 0 0 auto;
+}
+
+.item-title {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.item-meta {
+  font-size: 0.8rem;
+  color: #555555;
+  margin-bottom: 0.4rem;
+  word-wrap: break-word;
+}
+
+.button-small {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.nav {
+  margin-bottom: 0.8rem;
+}
+
+.link {
+  color: #111111;
+}
+
+.reader {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.font-small .reader {
+  font-size: 0.9rem;
+}
+
+.font-large .reader {
+  font-size: 1.2rem;
+}
+
+
+.reader img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.pagination {
+  margin-top: 1.2rem;
+  text-align: left;
+}
+
+.pagination-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.page-link {
+  color: #111111;
+  text-decoration: underline;
+}
+
+.page-link-disabled {
+  color: #999999;
+  text-decoration: none;
+}
+
+.page-info {
+  font-size: 0.9rem;
+  color: #444444;
+}
+

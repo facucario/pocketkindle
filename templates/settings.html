@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}PocketKindle – Settings{% endblock %}
+
+{% block content %}
+  <h2>Reading settings</h2>
+  <form method="post">
+    <div class="label">
+      <span>Font size</span>
+      <label>
+        <input type="radio" name="font_size" value="small" {% if current_font == 'small' %}checked{% endif %}>
+        Small
+      </label>
+      <label>
+        <input type="radio" name="font_size" value="medium" {% if current_font == 'medium' %}checked{% endif %}>
+        Medium
+      </label>
+      <label>
+        <input type="radio" name="font_size" value="large" {% if current_font == 'large' %}checked{% endif %}>
+        Large
+      </label>
+    </div>
+
+    <div class="label">
+      <span>Reading mode</span>
+      <label>
+        <input type="radio" name="reading_mode" value="scroll" {% if reading_mode == 'scroll' %}checked{% endif %}>
+        Scroll (one long page)
+      </label>
+      <label>
+        <input type="radio" name="reading_mode" value="paged" {% if reading_mode == 'paged' %}checked{% endif %}>
+        Paged
+      </label>
+    </div>
+
+    <div class="label">
+      <span>Lines per page (for paged mode)</span>
+      <input type="number" name="lines_per_page" min="3" max="100" value="{{ lines_per_page or 10 }}">
+    </div>
+
+    <button type="submit" class="button">Save</button>
+  </form>
+{% endblock %}
+
