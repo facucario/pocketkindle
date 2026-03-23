@@ -1,0 +1,16 @@
+.git
+.gitignore
+.venv
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.env
+.env.*
+*.md
+.DS_Store
+node_modules
+.next
+Dockerfile
+docker-compose*.yml
+.dockerignore

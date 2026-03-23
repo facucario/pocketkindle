@@ -1,0 +1,14 @@
+services:
+  pocketkindle:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    env_file:
+      - .env
+    environment:
+      PORT: "8000"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M

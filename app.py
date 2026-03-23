@@ -271,9 +271,6 @@ def create_app() -> Flask:
             lines_per_page=lines_per_page,
         )
 
-    # Additional routes (articles list, reader, settings, logout) will be
-    # implemented as part of the remaining todos.
-
     return app
 
 
